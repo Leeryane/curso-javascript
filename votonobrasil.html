@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto No Brasil</title>
+    <style>
+        body { 
+            background-color: bisque;
+        }
+        h1 {
+            color: maroon;
+            text-align: center;
+            font: bold 20pt arial;
+        }
+        
+      p {
+          color: black;
+          font: bold 14pt arial;
+      } 
+        
+    
+       
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de votação no brasil</h1>
+    <p>Qual sua idade?</p> <input type="number" name="txtidade" id="txtidade">
+    <input type="button" value="Verificar" onclick="Calcular()">
+
+    <div id="res"></div>
+
+    <script>
+        var txti = document.querySelector('input#txtidade')
+
+        function Calcular() {
+        var res = document.querySelector ('div#res')
+        var idade = (txti.value)
+        res.innerHTML = `<p><strong>Você tem ${idade} anos</strong></p>`
+        if (idade < 16)
+        res.innerHTML += `<p>Você não vota</p>`
+        else if (idade < 18 || idade > 65)
+        res.innerHTML += `<p>Voto opcional</p>`
+        else if (idade >=18) {
+            res.innerHTML += `<P>VOTO OBRIGATÓRIO</p>`
+        }
+    }
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>

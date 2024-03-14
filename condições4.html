@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFANDEGA</title>
+</head>
+<body>
+    <h1>Sistema Alfandegário</h1>
+        País: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        var txtp = document.querySelector('input#txtpais')
+
+        function Calcular(){
+            var txtp = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var pais = (txtp.value)
+            
+            if(pais == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <Strong>Estrangeiro</strong></p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

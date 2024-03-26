@@ -8,14 +8,10 @@ h1 {
     color: black
 }
 
-header {
-    color: white;
-    text-align: center;
-}
+
 
 section {
     background-color: white;
-    text-align: center;
     border-radius: 10px;
     padding: 15px;
     width: 500px;
@@ -41,3 +37,8 @@ footer {
     font-style: italic;
 
 }
+
+#res { 
+    color: rgb(45, 10, 73)
+}
+
